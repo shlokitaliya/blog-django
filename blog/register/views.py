@@ -5,7 +5,7 @@ from .forms import RegistrationForm, LoginForm
 # Create your views here.
 
 
-def user_registeration(request):
+def user_registration(request):
     if request.method == "POST":
         form = RegistrationForm(request.POST)
         if form.is_valid():
