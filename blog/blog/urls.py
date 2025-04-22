@@ -22,7 +22,7 @@ import feed,register
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("",include('feed.urls')),
-    path("register/",include('register.urls')),
+    path("accounts/",include('register.urls')),
 
 
     path("__reload__/", include("django_browser_reload.urls")),
