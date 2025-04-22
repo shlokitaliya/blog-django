@@ -23,7 +23,7 @@
     
                 <!-- Center: Search bar -->
                 <div class="flex-1 mx-4 flex justify-center">
-                    <form action="" method="GET" class="relative w-full max-w-[400px]">
+                    <form action="" method="GET" class="relative w-full max-w-[460px]">
                         <input
                             type="text"
                             name="q"
@@ -53,14 +53,24 @@
                             <span class="text-gray-700 font-medium">{{ user.username }}</span>
                         </div>
                         <a href="{% url 'register:user_logout' %}" class="text-sm text-red-600 hover:underline">Logout</a>
-                    {% else %}
-                        <a href="{% url 'register:user_login' %}" class="text-sm text-blue-600 hover:underline">Login</a>
-                        <a href="{% url 'register:user_registration' %}" class="text-sm text-green-600 hover:underline">Sign Up</a>
+                        {% else %}
+                        <a href="{% url 'register:user_login' %}">
+                            <button class="border border-gray-300 text-gray-800 text-sm px-4 py-1.5 rounded-md hover:bg-gray-100 transition duration-200">
+                                Login
+                            </button>
+                        </a>
+                        <a href="{% url 'register:user_registration' %}">
+                            <button class="border border-gray-800 bg-gray-800 text-white text-sm px-4 py-1.5 rounded-md hover:bg-gray-700 transition duration-200">
+                                Sign Up
+                            </button>
+                        </a>
                     {% endif %}
+                    
                 </div>
             </div>
         </div>
     </nav>
+    
     
 
     {% block content %}
