@@ -24,6 +24,7 @@
                 <!-- Center: Search bar -->
                 <div class="flex-1 mx-4 flex justify-center">
                     <form action="" method="GET" class="relative w-full max-w-[460px]">
+                        {% csrf_token %}
                         <input
                             type="text"
                             name="q"

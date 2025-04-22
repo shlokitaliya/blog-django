@@ -22,8 +22,8 @@ def user_login(request):
         if form.is_valid():
             user = form.get_user()
             auth_login(request, user)
-            return redirect('feed:task_list')  # Redirect to task list or dashboard
-        else:
+            return redirect('feed:index')  # Redirect to task list or dashboard
+        else:       
             form.add_error(None, "Invalid username or password")  # Optional: better UX
     else:
         form = LoginForm()
